@@ -21,7 +21,9 @@ Or install it yourself as:
 
 ## Usage
 
-   web = Web.get(url,opt)
+```ruby
+web = Web.get(url,opt)
+```
 
 TODO: Write usage instructions here
 
