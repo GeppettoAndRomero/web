@@ -14,7 +14,9 @@ module Web
     opt = if opt then @default.merge(opt) else @default end
     begin
       timeout(opt[:timeout]) do
-        open(url)
+        web = open(url,
+             "User-Agent" => opt[:ua]
+            )
       end
     rescue TimeoutError => e
       e
@@ -24,3 +26,4 @@ module Web
   end
 
 end
+
